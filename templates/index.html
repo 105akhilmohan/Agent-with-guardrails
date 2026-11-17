@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Agent with Guardrails</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+
+        <div class="logo">🛡️</div>
+
+        <div>
+            <h1>Agent with Guardrails</h1>
+            <p>Intelligent AI with controlled execution</p>
+        </div>
+
+        <span class="status">● Online</span>
+
+    </header>
+
+    <main>
+
+        <div class="welcome">
+
+            <h2>Welcome to AI Agent</h2>
+
+            <p>
+                Ask a question or give an instruction.
+                Your request will be checked by security
+                guardrails before execution.
+            </p>
+
+        </div>
+
+
+        <div class="features">
+
+            <div class="feature">
+
+                <span>🧠</span>
+
+                <h3>AI Reasoning</h3>
+
+                <p>Understand and process instructions.</p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <span>🛡️</span>
+
+                <h3>Guardrails</h3>
+
+                <p>Validate inputs and outputs.</p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <span>⚙️</span>
+
+                <h3>Tool Execution</h3>
+
+                <p>Execute permitted operations.</p>
+
+            </div>
+
+        </div>
+
+
+        <section class="chat-section">
+
+            <div class="chat-header">
+
+                <h3>AI Conversation</h3>
+
+                <button id="clearBtn" type="button">
+                    Clear Chat
+                </button>
+
+            </div>
+
+
+            <div id="chatBox" class="chat-box">
+
+                <div class="message bot">
+
+                    <div class="avatar">🛡️</div>
+
+                    <div class="bubble">
+                        Hello! I am your AI agent.
+                        How can I help you today?
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div id="guardrailStatus" class="guardrail-status">
+
+                🛡️ Guardrails are active
+
+            </div>
+
+
+            <div class="input-area">
+
+                <input
+                    type="text"
+                    id="userInput"
+                    placeholder="Enter your message..."
+                    maxlength="2000"
+                    autocomplete="off"
+                >
+
+                <button id="sendBtn" type="button">
+                    Send ➤
+                </button>
+
+            </div>
+
+
+            <div class="footer-text">
+
+                Protected by input validation, tool permissions
+                and output validation.
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+</body>
+
+</html>
